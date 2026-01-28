@@ -1,0 +1,156 @@
+/* Andrew Banonis
+ajb9042
+IST 256: ASG-L2: LIVE Portfolio Page Assignment
+1/28/26 */
+
+/*
+Table of Cotents:
+    1. CSS Custom Properties
+    2. CSS Typography and Base Styles
+    3. Layout Components
+    4. Navigation Styles 
+    5. Main Content Styles
+    6. Table Styles
+    7. Utility Classes
+    8. Media Queries
+    9. Animations
+    10. Main Content Styles Continued
+    11. Media Queries Contintued
+*/
+
+/* 1. CSS Custom Properties */
+:root {
+    --main-border: 1px solid #ccc;
+    --table-border: 1px solid black;
+    --bg-color: #ffffff;
+    --pennstate-blue: #001E44;
+    --spacing-unit: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Typography and Base Styles */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+/* 3. Layout Components */
+header, nav, main, section, article, aside, footer {
+    border: var(--main-border);
+    padding: var(--spacing-unit);
+    margin-bottom: 10px;
+}
+
+/* 4. Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--pennstate-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #009CDE;
+}
+
+/* 5. Main Content Styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+/* 6. Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* 7. Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* 8. Media Queries */
+@media (min-width: 768px) {
+    #about-me {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px
+    }
+}
+
+/* 9. Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* 10. Main Content Styles Continued */
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+article, aside, table {
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 11. Media Queries Contintued */
+@media (min-width: 768px) {
+    #about-me {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section {
+        animation: none;
+    }
+
+    nav a {
+        transition: none;
+    }
+}

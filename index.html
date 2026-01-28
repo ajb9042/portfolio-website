@@ -1,0 +1,176 @@
+<!-- Andrew Banonis
+ajb9042
+IST 256: ASG-L2: LIVE Portfolio Page Assignment
+1/28/26 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Andrew Banonis | Personal Portfolio Website</title>
+        <meta name="description" content="Portfolio page">
+        <meta name="author" content="Andrew Banonis">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            #hero h1 {
+                color: #001E44;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <header id="hero">
+            <h1>Andrew Banonis</h1>
+            <p>Information Technology student at Penn State.</p>
+        </header>
+
+        <nav aria-label="main navigation">
+            <ul>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p>I am a student at Penn State majoring in Information Technology. I plan to graduate in <time datetime="2028-05">May 2028</time>.</p>
+
+                <article>
+                    <h3>My Interests</h3>
+                    <p>I have always had an interest in computers from a young age. Technology has improved our lives and brings many benefits.</p>
+                    <ol>
+                        <li>Powerful</li>
+                        <li>Efficient</li>
+                        <li>Reliable</li>
+                    </ol>
+                </article>
+
+                <aside>
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li>Favorite Hobby: Skiing</li>
+                        <li>Favorite Food: Spaghetti</li>
+                    </ul>
+                    <blockquote>
+                        "Think Different" - Steve Jobs
+                    </blockquote>
+                </aside>
+            </section>
+
+            <hr>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <table>
+                    <caption>Technologies I am familier with</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Years of Experience</th>
+                            <th scope="col">Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">HTML</th>
+                            <td>5 Years</td>
+                            <td>Very Knowledgable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td>5 Years</td>
+                            <td>Very Knowledgable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">JS</th>
+                            <td>5 Years</td>
+                            <td>Very Knowledgable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Python</th>
+                            <td>4 Years</td>
+                            <td>Intermediate</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Last updated on January 2026.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <dl>
+                    <dt>BigCommerce</dt>
+                    <dd>Ecommerce SaaS platform.</dd>
+                    <dt>Odoo</dt>
+                    <dd>Open-source ERP.</dd>
+                </dl>
+            </section>
+
+            <hr>
+
+            <section id="experience">
+                <h2>Projects</h2>
+
+                <article>
+                    <h3>Discord Bot</h3>
+                    <p>Built using <code>Python</code>. This bot can play music from YouTube and Spotify in a Discord voice channel.</p>
+                    <figure>
+                        <img src="https://1000logos.net/wp-content/uploads/2021/06/Discord-logo.jpg" alt="Discord logo" width="400" height="200" style="filter: grayscale(20%);" loading="lazy">
+                    </figure>
+                </article>
+                
+                <article>
+                    <h3>Ecommerce Migratiom</h3>
+                    <p>I helped perform UAT testing for an e-commerce migration project. This involved testing new features on BigCommerce and custom ERP implementation.</p>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Bc-logo-dark.svg/1280px-Bc-logo-dark.svg.png" alt="BigCommerce logo" width="700" height="150" style="filter: grayscale(20%);" loading="lazy">
+                    </figure>
+                </article>
+            </section>
+
+            <hr>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="/contact" method="post">
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <p>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </p>
+                        <p>
+                            <label for="name">Email:</label>
+                            <input type="text" id="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="name">Message:</label>
+                            <input type="text" id="message" name="message" required>
+                        </p>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+
+                <p>Other contact methods:</p>
+                <ul>
+                    <li>Email: <a href="mailto:ajb9042@psu.edu">ajb9042@psu.edu</a></li>
+                    <li>Phone: <a href="tel:6101234567">(610) 123-4567</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Andrew Banonis. All rights reserved.</p>
+        </footer>
+
+    </body>
+
+</html>

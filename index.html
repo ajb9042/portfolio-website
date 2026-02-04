@@ -22,7 +22,7 @@ IST 256: ASG-L2: LIVE Portfolio Page Assignment
     </head>
 
     <body>
-        
+
         <header id="hero">
             <h1>Andrew Banonis</h1>
             <p>Information Technology student at Penn State.</p>
@@ -161,7 +161,11 @@ IST 256: ASG-L2: LIVE Portfolio Page Assignment
 
                 <p>Other contact methods:</p>
                 <ul>
-                    <li>Email: <a href="mailto:ajb9042@psu.edu">ajb9042@psu.edu</a></li>
+                    <li>Email:
+                        <span id="email-display">
+                            <button type="button" id="reveal-button">Click to show email</button>
+                        </span>
+                    </li>
                     <li>Phone: <a href="tel:6101234567">(610) 123-4567</a></li>
                 </ul>
             </section>
@@ -170,6 +174,23 @@ IST 256: ASG-L2: LIVE Portfolio Page Assignment
         <footer>
             <p>&copy; 2026 Andrew Banonis. All rights reserved.</p>
         </footer>
+
+        <script>
+            // Hide email button
+            const emailContainer = document.getElementById('email-display');
+            const revealButton = document.getElementById('reveal-button');
+
+            const email = "ajb9042@psu.edu";
+
+            revealButton.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.href = "mailto:" + email;
+                link.textContent = email;
+
+                emailContainer.innerHTML = "";
+                emailContainer.appendChild(link);
+            });
+        </script>
 
     </body>
 

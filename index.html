@@ -166,7 +166,11 @@ IST 256: ASG-L2: LIVE Portfolio Page Assignment
                             <button type="button" id="reveal-button">Click to show email</button>
                         </span>
                     </li>
-                    <li>Phone: <a href="tel:6101234567">(610) 123-4567</a></li>
+                    <li>Phone:
+                        <span id="phone-display">
+                            <button type="button" id="reveal-phone">Click to show phone</button>
+                        </span>
+                    </li>
                 </ul>
             </section>
         </main>
@@ -189,6 +193,20 @@ IST 256: ASG-L2: LIVE Portfolio Page Assignment
 
                 emailContainer.innerHTML = "";
                 emailContainer.appendChild(link);
+            });
+
+            // Hide phone button
+            const phoneContainer = document.getElementById('phone-display');
+            const revealPhoneButton = document.getElementById('reveal-phone');
+            const phoneNumber = "(610) 123-4567";
+
+            revealPhoneButton.addEventListener('click', function() {
+                const phoneLink = document.createElement('a');
+                phoneLink.href = "tel:" + phoneNumber.replace(/\D/g,''); // Remove any symbols from phone number string
+                phoneLink.textContent = phoneNumber;
+
+                phoneContainer.innerHTML = "";
+                phoneContainer.appendChild(phoneLink);
             });
         </script>
 
